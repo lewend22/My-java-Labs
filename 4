@@ -1,0 +1,85 @@
+
+package lond2;
+
+import java.util.Scanner;
+
+
+public class Lond2 {
+
+   
+    public static void main(String[] args) {
+  Scanner in =new Scanner (System.in);
+  
+   String more ="+" ; 
+   double total= 0.0 ; 
+   int choise;
+    System.out.println("Welcome To LondMachine  if you want a buy something choose a number please and then payed cash or by karte  : ");
+   
+   do{
+      
+       System.out.println("");
+       System.out.println("RedBull #1 (1.49$)\tLemonade #2 (2.00$) .");
+       System.out.println("Osaft #3 (2.00$)\tIceTee #4 (3.00$) .");
+       System.out.println("Coca #5 (1.49$)\t    IceKaffee #6 (3.00) ."); 
+       System.out.println("Pepsi #7 (1.49$)\twater0.5L #8 (0.49$) \n :");
+       
+     choise =in.nextInt();
+     
+    double price = 0.0 ;
+   switch(choise){
+       case 1 : 
+           price = 1.49 ;
+           break;
+       case 2 :
+           price = 2.00 ;
+           break;
+       case 3 :
+           price = 2.00 ;
+           break;
+       case 4 : 
+           price = 3.00 ;
+           break;
+       case 5 :
+           price = 1.49 ;
+           break;
+       case 6 :
+           price = 3.00 ;
+           break;
+       case 7 :
+           price = 1.49 ;
+           break;
+       case 8 :
+           price = 0.49 ;
+           break;
+           
+       default :
+     System.out.println("please Choose a rghit number");  
+       continue;     
+   
+   }
+   total+= price;
+       System.out.println("Is costs "+price+"$");
+       
+       
+     
+       System.out.println("If you need something else press (y) / If you want to exit press (n)");
+       more = in.next().toLowerCase();
+   }while(more.equals("y"));
+   
+   System.out.println("By Karte press 'k' Or Cash 'c'");
+        char pay =in.next().charAt(0);
+        switch(pay){
+            case 'k' :
+                System.out.println("please wait .... ");
+                System.out.println("payment completed");
+                break;
+            case 'c':
+                System.out.println("please wait .... ");
+                System.out.println("payment completed");
+                break;
+        }
+        System.out.println("The Total price is "+total+"$");
+       System.out.println("");
+    System.out.println("Thank you for choosing Us.....Bye .");    }
+    
+}
