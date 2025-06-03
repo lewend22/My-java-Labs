@@ -1,0 +1,81 @@
+package lond6;
+
+
+import java.util.Scanner;
+
+
+public class Lond6 {
+static void lond(String name){
+    
+    System.out.println("Hello "+name);
+    System.out.println("Welcome to our program .\n");
+}
+
+   static int lond(int n1,int n2){
+
+    return n1 + n2 ;
+} 
+
+   static double lond(double n1,double n2){
+   
+       return n1 + n2  ;
+   }
+   
+   static int lond(int n1 ,int n2 ,int n3){
+   
+   return n1 + n2 + n3 ;
+   }
+   
+public static void main(String[] args) {
+        Scanner in = new Scanner (System.in);
+        
+        char c;
+        
+        System.out.println("Enter your name : ");
+        String name = in.next();
+        lond(name);
+        
+        System.out.println("If you want to add and colction two intreger number press 'i'. \n");
+        System.out.println("If you want to add and colction two double number press 'd'. \n");
+        System.out.println("If you want to add and colction three intreger number press 'p'. \n");
+        c=in.next().charAt(0);
+    switch(Character.toLowerCase(c)){
+
+     case 'i':
+        int n1,n2;
+        System.out.println("Enter the first number : ");
+        n1 = in.nextInt();
+        System.out.println("Enter the second number : ");
+        n2 = in.nextInt();
+         System.out.println("The calcultor :"+lond(n1,n2)+"\n");
+        System.out.println("The max number btween them : "+Math.max(n1, n2)+"\n");
+        break;
+     case 'd':
+         double d1,d2 ;
+         System.out.println("Enter the first number : "); 
+         d1 =in.nextDouble();
+         System.out.println("Enter the second number : ");
+         d2 =in.nextDouble();
+         System.out.println("The calculator : "+lond(d1,d2)+"\n");
+         System.out.println("The min number between them : "+Math.min(d1, d2)+"\n");
+         break;
+     case'p':   
+         int i , j , y ;
+         System.out.println("Enter the first number : ");
+         i=in.nextInt();
+         System.out.println("Enter the second number : ");
+         j=in.nextInt();
+         System.out.println("Enter the theerd number : ");
+         y=in.nextInt();
+         System.out.println("The calculator : "+lond(i,j,y)+"\n");
+         System.out.println("the avrage of those three number : "+lond(i,j,y)/3+"\n");
+         break;
+     default :
+         System.out.println("Good Bye");
+         
+         
+        }
+    System.out.println("Good Bye");
+    }
+
+}
