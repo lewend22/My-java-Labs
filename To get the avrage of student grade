@@ -1,0 +1,32 @@
+
+
+package com.mycompany.mavenproject4;
+
+import java.util.Scanner;
+
+
+public class Mavenproject4 {
+
+ public static void main(String[] args) {
+     Scanner in = new Scanner (System.in);
+     System.out.println("Enter number of the student : ");
+     int size = in.nextInt() ;
+     int []arr = new int [size];    
+          
+  for(int j = 0 ; j < size ; j++){
+      System.out.println("enter grade of the student #"+(j+1)+" : ");
+      arr[j]= in.nextInt();
+         } 
+        
+        double sum = 0 ;
+ for(int i = 0 ; i < arr.length; i++){
+      sum+= arr[i];
+          
+       }
+  double avg = sum/arr.length ; 
+    System.out.println("avrage equal = "+avg);
+        
+        
+        
+ }
+}
