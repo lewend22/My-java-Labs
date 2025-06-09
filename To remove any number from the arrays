@@ -1,0 +1,25 @@
+package com.mycompany.mavenproject4;
+
+import java.util.Scanner;
+
+
+public class Mavenproject4 {
+
+ public static void main(String[] args) {
+   Scanner in = new Scanner(System.in);
+     System.out.println("Enter number that you want to removed : ");
+     int number = in.nextInt(); 
+     int arr[] = {3,4,5,6,7,8,9,2};
+     int count = 0 ;
+     int new_arr[] = new int [arr.length] ; 
+   for(int i = 0 ; i < arr.length ;i++){
+       if(arr[i]!= number){
+       new_arr[count] = arr[i];
+       count++ ;
+       }
+       }
+       System.out.print("The arrays after removing "+number+" : ");
+       for(int i = 0 ; i < count ;i++)
+        System.out.print(new_arr[i] +" ");
+       }
+       }
