@@ -1,0 +1,25 @@
+
+package com.mycompany.mavenproject4;
+
+import java.util.Scanner;
+
+
+public class Mavenproject4 {
+
+ public static void main(String[] args) {
+     Scanner in = new Scanner(System.in);
+     int arr[] = {3,2,6,8,9,5};
+     for(int i = 0 ;i < arr.length ;i++){
+         System.out.println("arr["+i+"] = "+arr[i]);
+        }
+         System.out.println("Enter a number to removed of the list : ");
+         int check = in.nextInt();
+     for(int j = 0 ;j<arr.length ;j++){
+         if(arr[j]== check ){
+             continue ;   
+        }   
+         System.out.println("arr["+j+"] = "+arr[j]);
+         
+       }
+        }
+         }
