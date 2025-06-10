@@ -1,0 +1,63 @@
+package com.mycompany.mavenproject4;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Mavenproject4 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        // Declare and initialize first array
+        int arr1[] = new int[3];
+        System.out.println("Enter three numbers for arr1:");
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print("Element #" + (i + 1) + ": ");
+            arr1[i] = in.nextInt();
+        }
+
+        // Declare and initialize second array
+        int arr2[] = new int[3];
+        System.out.println("Enter three numbers for arr2:");
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print("Element #" + (i + 1) + ": ");
+            arr2[i] = in.nextInt();
+        }
+
+        // Merge both arrays into one
+        int arr[] = new int[arr1.length + arr2.length];
+        int i;
+        for (i = 0; i < arr1.length; i++) {
+            arr[i] = arr1[i];
+        }
+        for (int j = 0; j < arr2.length; j++) {
+            arr[i] = arr2[j];
+            i++;
+        }
+
+        // Ask the user whether to sort ascending or descending
+        System.out.print("Do you want to sort ascending or descending? (a/d): ");
+        char choice = in.next().charAt(0);
+
+        // Sort based on user choice
+        if (choice == 'a' || choice == 'A') {
+            Arrays.sort(arr); // ascending order
+        } else if (choice == 'd' || choice == 'D') {
+            Arrays.sort(arr); // first sort ascending
+            // then reverse the array for descending order
+            for (int j = 0; j < arr.length / 2; j++) {
+                int temp = arr[j];
+                arr[j] = arr[arr.length - 1 - j];
+                arr[arr.length - 1 - j] = temp;
+            }
+        } else {
+            System.out.println("Invalid choice. Showing unsorted array.");
+        }
+
+        // Print final array
+        System.out.println("\nFinal array:");
+        for (int j = 0; j < arr.length; j++) {
+            System.out.println("arr[" + j + "] = " + arr[j]);
+        }
+    }
+}
