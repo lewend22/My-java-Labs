@@ -16,7 +16,6 @@ public class Lond2 {
     System.out.println("Welcome To LondMachine  if you want a buy something choose a number please and then payed cash or by karte  : ");
    
    do{
-      
        System.out.println("");
        System.out.println("RedBull #1 (1.49$)\tLemonade #2 (2.00$) .");
        System.out.println("Osaft #3 (2.00$)\tIceTee #4 (3.00$) .");
